@@ -38,20 +38,10 @@ aside {
   overflow-y: auto;
 }
 
-aside .blue {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  margin: 20px auto;
-}
-
 main {
   height: calc(100vh - 80px);
   background-color: #141922;
   overflow-y: auto;
-}
-
-.content {
   padding-top: 80px;
   padding-left: 200px;
 
@@ -66,27 +56,125 @@ main {
   margin: 20px;
 }
 
-/* SIDEBAR */
-.sidebar nav {
-  padding-left: 10px;
+/* UTILITY */
+.text-center {
+  text-align: center;
 }
-.sidebar nav img {
-  width: 70%;
-  margin-top: 10px;
+
+/* SIDEBAR */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav {
   margin-bottom: 20px;
 }
 
+.sidebar .logo {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+}
+
+.sidebar .logo > i {
+  display: block;
+  color: #fff;
+  font-size: 2em;
+}
+
+.sidebar .logo img {
+  max-width: 100%;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul > li {
+  padding: 10px 10px;
+  margin-bottom: 5px;
+  border-left: 4px solid transparent;
+}
+
+.sidebar ul > li.active {
+  border-left: 4px solid #ADFF2F;
+}
+
+.sidebar ul > li > a {
+  text-decoration: none;
+  color: #6D6D6D;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul > li > a > i {
+  font-size: 2em;
+  color: #D2D2D2;
+  margin-right: 5px;
+}
+
+.sidebar ul > li > a > span {
+  display: none;
+}
+
+.sidebar .list ul {
+  overflow-y: auto;
+}
 
 @media all and (max-width: 767px) {
   aside {
-    width: 50px;
+    width: 60px;
   }
 
   aside .blue {
     width: 30px;
   }
 
-  .content {
-    padding-left: 50px;
+  main {
+    padding-left: 60px;
+  }
+
+  .sidebar .logo > img {
+    display: none;
+  }
+
+  .sidebar ul > li.active {
+    border-left: none;
+  }
+
+  .sidebar ul > li {
+    border-left: none;
+  }
+
+  .sidebar ul > li > a {
+    justify-content: center;
+  }
+
+  .sidebar ul > li > a > i {
+    margin-right: 0;
+  }
+
+}
+
+@media all and (min-width: 768px) {
+  .sidebar .logo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 70%;
+  }
+
+  .sidebar .logo > i {
+    display: none;
+  }
+
+  .sidebar .logo > img {
+    display: inline-block;
+  }
+
+  .sidebar ul > li > a > span {
+    display: inline;
   }
 }
