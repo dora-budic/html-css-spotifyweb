@@ -67,20 +67,14 @@ main {
   flex-direction: column;
 }
 
-.sidebar nav {
-  margin-bottom: 20px;
-}
-
 .sidebar .logo {
-  margin-top: 10px;
-  margin-bottom: 20px;
-
+  margin: 10px 0;
 }
 
 .sidebar .logo > i {
   display: block;
   color: #fff;
-  font-size: 2em;
+  font-size: 18px;
 }
 
 .sidebar .logo img {
@@ -91,13 +85,13 @@ main {
   list-style: none;
 }
 
-.sidebar ul > li {
-  padding: 10px 10px;
+.sidebar .navigation ul > li {
+  padding: 8px 10px;
   margin-bottom: 5px;
   border-left: 4px solid transparent;
 }
 
-.sidebar ul > li.active {
+.sidebar .navigation ul > li.active {
   border-left: 4px solid #ADFF2F;
 }
 
@@ -109,18 +103,34 @@ main {
   align-items: center;
 }
 
-.sidebar ul > li > a > i {
-  font-size: 2em;
+.sidebar .navigation ul > li > a > i {
+  font-size: 18px;
   color: #D2D2D2;
   margin-right: 5px;
 }
 
-.sidebar ul > li > a > span {
+.sidebar .navigation ul > li > a > span {
   display: none;
+  font-size: 14px;
 }
 
-.sidebar .list ul {
+.sidebar .playlist {
+  display: none;
+  padding-left: 14px;
+}
+
+.sidebar .new-playlist h4 {
+  color: #fff;
+}
+
+.sidebar .list {
   overflow-y: auto;
+  height: 230px;
+}
+
+.sidebar .list ul > li {
+  padding: 5px 0;
+  font-size: 14px;
 }
 
 @media all and (max-width: 767px) {
@@ -140,19 +150,19 @@ main {
     display: none;
   }
 
-  .sidebar ul > li.active {
+  .sidebar .navigation ul > li.active {
     border-left: none;
   }
 
-  .sidebar ul > li {
+  .sidebar .navigation ul > li {
     border-left: none;
   }
 
-  .sidebar ul > li > a {
+  .sidebar .navigation ul > li > a {
     justify-content: center;
   }
 
-  .sidebar ul > li > a > i {
+  .sidebar .navigation ul > li > a > i {
     margin-right: 0;
   }
 
@@ -174,7 +184,11 @@ main {
     display: inline-block;
   }
 
-  .sidebar ul > li > a > span {
+  .sidebar .navigation ul > li > a > span {
     display: inline;
+  }
+
+  .sidebar .playlist {
+    display: block;
   }
 }
