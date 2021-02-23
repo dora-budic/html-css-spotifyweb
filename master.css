@@ -162,7 +162,6 @@ header a:hover {
   display: none;
   padding-left: 14px;
   margin-top: 20px;
-  overflow-y: auto;
 }
 
 .sidebar .new-playlist a:hover i, .sidebar .new-playlist a:hover span, .sidebar .playlist a:hover {
@@ -192,7 +191,12 @@ header a:hover {
   font-weight: bold;
 }
 
-.sidebar .list ul > li {
+.sidebar .list {
+  height: 24vh;
+  overflow-y: auto;
+}
+
+.sidebar .list > li {
   padding: 10px 0;
   font-size: 14px;
 }
@@ -363,19 +367,6 @@ section .title {
 
 #artists .container .card .image .overlay {
   border-radius: 100%;
-}
-
-
-@media all and (max-height: 570px) {
-  aside {
-    height: calc(100vh - 48px);
-  }
-}
-
-@media all and (max-height: 535px) {
-  aside {
-    height: 100vh;
-  }
 }
 
 @media all and (min-width: 768px) {
