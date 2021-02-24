@@ -235,7 +235,7 @@
     </main>
 
     <footer>
-      <div class="left">
+      <div class="album">
         <img src="./img/song.jpg" alt="venere e marte cover">
         <div class="song-info">
           <div class="song color-w"><a href="#">Venere e Marte (feat. Marco Mengoni, Frah Quintale)</a></div>
@@ -255,7 +255,7 @@
         </div>
       </div>
 
-      <div class="center">
+      <div class="player">
         <div class="controls">
           <button type="button" name="random">
             <i class="fas fa-random"></i>
@@ -282,8 +282,21 @@
         </div>
       </div>
 
-      <div class="right">
-
+      <div class="controls-sources">
+        <button type="button" name="list">
+          <i class="fas fa-list"></i>
+        </button>
+        <button type="button" name="device">
+          <i class="fas fa-desktop"></i>
+        </button>
+        <button type="button" name="volume">
+          <i class="fas fa-volume-up"></i>
+        </button>
+        <div class="progress-bar">
+          <div class="slider-container">
+            <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+          </div>
+        </div>
       </div>
     </footer>
   </body>
